@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #0a0a0a;
+    --bg-light: #eeeeee;
+  }
+
+  body {
+    @apply font-sans;
+  }
+
+  /* Soft yellow selection */
+  ::selection {
+    background-color: #fde047;
+    color: #0a0a0a;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 160, 160, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 160, 160, 0.45);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Auto-hide cursor on player inactivity */
+.player-idle-hide-cursor,
+.player-idle-hide-cursor * {
+  cursor: none !important;
+}
+
+/* Minimalist elegant series badge */
+.series-card-glass {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}

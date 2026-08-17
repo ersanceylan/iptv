@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>IPTV Player - Ücretsiz, No-Cloud & Çoklu Ekran (Multi-View) IPTV Oynatıcı</title>
+    <meta name="title" content="IPTV Player - Ücretsiz, No-Cloud & Çoklu Ekran (Multi-View) IPTV Oynatıcı" />
+    <meta name="description" content="IPTV Player: Tamamen ücretsiz, no-cloud (%100 yerel ve gizli) ve modern web IPTV oynatıcısı. M3U / M3U8 listenizi yükleyin; canlı TV kanalları, diziler ve filmleri çoklu ekran (Multi-View / Çift Ekran) desteğiyle donmadan izleyin." />
+    <meta name="keywords" content="iptv player, no-cloud iptv, web iptv player, ücretsiz iptv, çoklu ekran iptv, multi-view iptv, çift ekran video oynatıcı, m3u oynatıcı, m3u8 player, canlı tv izle, dizi izle, film izle, client-side iptv, hls player, mpeg-ts" />
+    <meta name="author" content="IPTV Player" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="application-name" content="IPTV Player" />
+    <meta name="apple-mobile-web-app-title" content="IPTV Player" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#eeeeee" media="(prefers-color-scheme: light)" />
+    
+    <!-- GEO Meta Tags (Global & Turkey) -->
+    <meta name="geo.region" content="TR" />
+    <meta name="geo.placename" content="Turkey" />
+    <meta name="geo.position" content="39.9334;32.8597" />
+    <meta name="ICBM" content="39.9334, 32.8597" />
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://streampulse-iptv-app.web.app/" />
+    <meta property="og:site_name" content="IPTV Player" />
+    <meta property="og:title" content="IPTV Player - Ücretsiz, No-Cloud & Çoklu Ekran (Multi-View) IPTV Oynatıcı" />
+    <meta property="og:description" content="Ücretsiz, no-cloud (%100 istemci taraflı) ve modern Web IPTV oynatıcısı. M3U listenizi ekleyin; canlı TV, film ve dizileri çoklu ekran (Multi-View) ile kesintisiz izleyin." />
+    <meta property="og:image" content="https://streampulse-iptv-app.web.app/favicon.svg" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://streampulse-iptv-app.web.app/" />
+    <meta name="twitter:title" content="IPTV Player - Free, No-Cloud & Multi-View Web IPTV Player" />
+    <meta name="twitter:description" content="Free, 100% no-cloud & privacy-focused Web IPTV Player. Stream live TV, series, and movies with Multi-View dual screen and anti-freeze engine." />
+    <meta name="twitter:image" content="https://streampulse-iptv-app.web.app/favicon.svg" />
+    <meta name="twitter:creator" content="@ersanceylann" />
+    
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://streampulse-iptv-app.web.app/" />
+    
+    <!-- JSON-LD Structured Data Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "IPTV Player",
+        "url": "https://streampulse-iptv-app.web.app/",
+        "description": "Free, 100% client-side (no-cloud) modern web IPTV player for streaming live TV, movies, and series with Multi-View dual-screen capability.",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "All (Web, iOS, Android, macOS, Windows, Linux, Smart TV)",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "Free and 100% No-Cloud (All data stored locally in browser IndexedDB)",
+          "Multi-View dual-screen video player (watch 2 streams simultaneously)",
+          "High performance HLS and MPEG-TS stream engine with buffer tuning",
+          "Automatic series season & episode grouping and next-episode player",
+          "Google Cast / Chromecast TV casting",
+          "Multi-language support (Turkish & English)"
+        ]
+      }
+    </script>
+    
+    <!-- Google Fonts: Noto Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Google Cast Callback MUST be defined BEFORE loading cast_sender.js -->
+    <script>
+      window.__onGCastApiAvailable = function(isAvailable) {
+        if (isAvailable && window.cast && window.chrome && window.chrome.cast) {
+          try {
+            cast.framework.CastContext.getInstance().setOptions({
+              receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,
+              autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
+            });
+            console.log('Google Cast API initialized');
+          } catch (e) {
+            console.error('Cast init error:', e);
+          }
+        }
+      };
+    </script>
+    <script src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+  </head>
+  <body class="bg-[#eeeeee] dark:bg-[#0a0a0a] text-neutral-900 dark:text-neutral-100 font-sans antialiased min-h-screen selection:bg-amber-400 selection:text-neutral-950 transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

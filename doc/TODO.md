@@ -1,0 +1,5 @@
+- [x] ingilizce dil desteği (TR / EN i18n entegrasyonu, otomatik dil tespiti ve Ayarlar'da dil değiştirici)
+- [x] SEO, GEO, meta optimizasyonları (OpenGraph, Twitter Cards, GEO etiketleri, JSON-LD Schema)
+- [x] favicon ve header meta tagları (SVG Favicon, Apple Touch Icon, Web Manifest, Theme Color)
+- [x] görüş ve öneriler için telegram channel linkini footer a ekle (Footer ve Ayarlar modalına eklendi)
+- [x] deploy et. (Firebase Hosting: https://streampulse-iptv-app.web.app)
