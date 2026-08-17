@@ -10,7 +10,6 @@ import SeriesGrid from './components/SeriesGrid';
 import LabelsModal from './components/LabelsModal';
 import HistorySection from './components/HistorySection';
 import OnboardingModal from './components/OnboardingModal';
-import Footer from './components/Footer';
 import { loadChannelsFromDB, saveChannelsToDB, loadHistory, recordHistory, clearAllData } from './utils/db';
 import { initTheme } from './utils/theme';
 import { useTranslation } from './utils/i18n';
@@ -387,9 +386,6 @@ export default function App() {
         ) : null}
 
       </main>
-
-      {/* Footer */}
-      <Footer />
 
       {/* Settings & Profile Modal */}
       <SettingsModal

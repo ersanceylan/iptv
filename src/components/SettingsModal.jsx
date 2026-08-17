@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Tv, Sun, Moon, Monitor, Trash2, PlusCircle, ExternalLink, Heart, HardDrive, Globe, MessageCircle } from 'lucide-react';
+import { X, Tv, Sun, Moon, Monitor, Trash2, PlusCircle, ExternalLink, Heart, HardDrive, Globe, MessageCircle, Github, Star } from 'lucide-react';
 import { getStoredTheme, setThemePreference } from '../utils/theme';
 import { useTranslation } from '../utils/i18n';
 
@@ -214,6 +214,32 @@ export default function SettingsModal({
               className="px-3 py-1.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-bold text-xs shadow-sm transition-all hover:scale-105 shrink-0"
             >
               {t('telegramButtonText')}
+            </a>
+          </div>
+
+          {/* GitHub Open Source Contribution Box */}
+          <div className="p-4 rounded-2xl bg-neutral-900/5 dark:bg-neutral-800/40 border border-neutral-300/80 dark:border-neutral-700/80 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-xl bg-neutral-900 dark:bg-white text-white dark:text-neutral-950 flex items-center justify-center shadow-md shrink-0">
+                <Github className="w-5 h-5" />
+              </div>
+              <div className="text-left">
+                <h4 className="text-xs font-bold text-neutral-900 dark:text-white flex items-center gap-1.5">
+                  <span>{t('githubContributeTitle')}</span>
+                </h4>
+                <p className="text-[11px] text-neutral-600 dark:text-neutral-400">
+                  {t('githubContributeDesc')}
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://github.com/ersanceylan/iptv"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1.5 rounded-xl bg-neutral-900 dark:bg-white hover:bg-neutral-800 dark:hover:bg-neutral-200 text-white dark:text-neutral-950 font-bold text-xs shadow-sm transition-all hover:scale-105 shrink-0 flex items-center gap-1.5"
+            >
+              <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+              <span>{t('githubContributeButton')}</span>
             </a>
           </div>
 
