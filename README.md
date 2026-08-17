@@ -2,7 +2,7 @@
 
 StreamPulse is a lightweight, modern, client-side, privacy-focused Web IPTV application built with **React**, **Vite**, and **Tailwind CSS**.
 
-🔗 **Live Demo:** [streampulse-iptv-app.web.app](https://streampulse-iptv-app.web.app)
+🔗 **Live Demo:** [iptv.ersanceylan.com](https://iptv.ersanceylan.com) | [streampulse-iptv-app.web.app](https://streampulse-iptv-app.web.app)
 
 ---
 
