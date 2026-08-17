@@ -51,6 +51,9 @@ ui-debug.log*
 *.sln
 *.sw?
 
+# Documentation / Internal Notes
+doc/
+
 # Environment variables & secrets
 .env
 .env.*
